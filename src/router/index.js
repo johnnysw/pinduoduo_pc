@@ -44,6 +44,22 @@ export const constantRoutes = [
   },
 
   {
+    path: '/classification',
+    component: Layout,
+    meta: { title: '商品', icon: 'dashboard' },
+    children: [{
+      path: 'classification/:name/:region',
+      name: '商品分类',
+      component: () => import('@/views/classification'),
+      meta: { title: '商品分类', icon: 'dashboard' }
+    }, {
+      path: 'toaddgoods/:addlevel/:addlevelnum',
+      name: '添加商品',
+      component: () => import('@/views/classification/toaddgoods')
+    }]
+  },
+
+  {
     path: '/',
     component: Layout,
     redirect: '/dashboard',
