@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-
 Vue.use(Router)
 
 /* Layout */
@@ -107,10 +106,10 @@ export const constantRoutes = [
         meta: { title: 'Menu1' },
         children: [
           {
-            path: 'menu1-1',
-            component: () => import('@/views/nested/menu1/menu1-1'),
-            name: 'Menu1-1',
-            meta: { title: 'Menu1-1' }
+            path: 'advertise',
+            component: () => import('@/views/nested/menu1/advertise'),
+            name: '广告管理',
+            meta: { title: 'advertise' }
           },
           {
             path: 'menu1-2',
