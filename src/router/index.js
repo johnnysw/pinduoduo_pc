@@ -59,7 +59,7 @@ export const constantRoutes = [
     component: Layout,
     redirect: '/example/table',
     name: 'Example',
-    meta: { title: 'Example', icon: 'example' },
+    meta: { title: '商品', icon: 'example' },
     children: [
       {
         path: 'table',
@@ -67,11 +67,23 @@ export const constantRoutes = [
         component: () => import('@/views/table/index'),
         meta: { title: 'Table', icon: 'table' }
       },
+    {
+      path: 'productList',
+        name: 'ProductList',
+      component: () => import('@/views/productList/index'),
+      meta: { title: 'ProductList', icon: 'table' }
+    },
       {
         path: 'tree',
         name: 'Tree',
         component: () => import('@/views/tree/index'),
         meta: { title: 'Tree', icon: 'tree' }
+      },
+      {
+        path: 'serve',
+        name: 'Serve',
+        component: () => import('@/views/serve/index'),
+        meta: { title: '商品服务管理',icon: 'table' }
       }
     ]
   },
