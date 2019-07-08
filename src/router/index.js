@@ -59,6 +59,7 @@ export const constantRoutes = [
     path: '/example',
     component: Layout,
     redirect: '/example/table',
+
     name: 'Example',
     meta: { title: 'Example', icon: 'example' },
     children: [
@@ -73,6 +74,11 @@ export const constantRoutes = [
         name: 'Tree',
         component: () => import('@/views/tree/index'),
         meta: { title: 'Tree', icon: 'tree' }
+      },{
+        path: 'photo_manage',
+        name: 'Photo_Manage',
+        component: () => import('@/views/photo_manage/index'),
+        meta: { title: 'Photo_Manage', icon: 'photo_manage' }
       }
     ]
   },

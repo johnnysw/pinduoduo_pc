@@ -24,6 +24,17 @@ import '@/permission' // permission control
  * please remove it before going online! ! !
  */
 import { mockXHR } from '../mock'
+
+// 商品发布 富文本
+import VueQuillEditor from 'vue-quill-editor'// 商品发布 富文本
+import 'quill/dist/quill.core.css'// 商品发布 富文本
+import 'quill/dist/quill.snow.css'// 商品发布 富文本
+import 'quill/dist/quill.bubble.css'// 商品发布 富文本
+  
+Vue.use(VueQuillEditor)// 商品发布 富文本
+
+
+
 if (process.env.NODE_ENV === 'production') {
   mockXHR()
 }
